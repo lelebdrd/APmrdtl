@@ -1,0 +1,127 @@
+/* ===========================
+   RESPONSIVE GLOBAL
+   =========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+@media (max-width: 900px) {
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 20px;
+    }
+}
+
+/* ===========================
+   MENU NOIR
+   =========================== */
+@media (max-width: 900px) {
+    .menu {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .title {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .bar {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+}
+
+/* ===========================
+   TABLEAU DU FORMULAIRE
+   =========================== */
+
+@media (max-width: 900px) {
+    table {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    table {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        padding: 6px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* ===========================
+   BOUTON MODIFIER
+   =========================== */
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+/* ===========================
+   CROIX DE FERMETURE
+   =========================== */
+
+@media (max-width: 600px) {
+    .croix {
+        position: absolute;
+        top: 285px;   /* juste sous la barre noire */
+        right: 15px;
+        font-size: 40px;
+        z-index: 9999;
+    }
+}

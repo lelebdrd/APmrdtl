@@ -1,0 +1,271 @@
+/* ========== BASE ========== */
+ 
+/* Couleur de fond beige, police sans-serif, sans marge par défaut */
+body {
+  background-color: #EDE8D0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* ========== NAVIGATION ========== */
+ 
+/* Barre de navigation bleue en haut, pleine largeur */
+nav {
+  background-color: #1a1aff;
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+ 
+/* Titre "Animations" dans la nav en blanc */
+nav h2 {
+  color: white;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 1.2rem;
+}
+ 
+/* Liens de navigation stylisés en boutons blancs */
+nav a {
+  background-color: #ffffff;
+  color: #1a1aff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+ 
+/* Légère transparence au survol des liens nav */
+nav a:hover {
+  opacity: 0.85;
+}
+ 
+/* ========== CONTENU PRINCIPAL ========== */
+ 
+/* Zone principale avec marges internes */
+main {
+  padding: 20px;
+}
+ 
+/* ========== GRILLE DES CARTES ========== */
+ 
+/* Conteneur des cartes en grille responsive */
+.grille-animations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+ 
+/* ========== CARTE ANIMATION ========== */
+ 
+/* Carte individuelle : fond blanc cassé, bordure, coins arrondis */
+.carte {
+  background-color: #f5f0e0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+/* Légère élévation au survol pour indiquer que la carte est cliquable */
+.carte:hover {
+  border-color: #1a1aff;
+  box-shadow: 0 2px 8px rgba(26, 26, 255, 0.15);
+}
+ 
+/* Titre de la carte en bleu */
+.carte h3 {
+  background-color: #1a1aff;
+  color: white;
+  margin: -14px -14px 12px -14px;
+  padding: 8px 14px;
+  border-radius: 6px 6px 0 0;
+  font-size: 1rem;
+}
+ 
+/* Texte description/lieu en gris foncé */
+.carte p {
+  color: #333;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+ 
+/* ========== PIED DE CARTE ========== */
+ 
+/* Zone heure + bouton en bas de la carte, alignés horizontalement */
+.carte-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+ 
+/* Texte heure et date en petit */
+.carte-footer .heure {
+  font-size: 0.8rem;
+  color: #555;
+}
+ 
+/* ========== BOUTONS ========== */
+ 
+/* Bouton s'inscrire : bleu */
+.btn-inscrire {
+  background-color: #1a1aff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+ 
+/* Bouton se désinscrire : rouge */
+.btn-desinscrire {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+ 
+/* Texte "Complet" en rouge sans bouton */
+.complet {
+  color: #cc0000;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+ 
+/* Texte "Inscrit" en vert */
+.inscrit {
+  color: #007700;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+ 
+/* Légère transparence au survol des boutons */
+.btn-inscrire:hover,
+.btn-desinscrire:hover {
+  opacity: 0.85;
+}
+ 
+/* ========== MESSAGES ========== */
+ 
+/* Message d'erreur en rouge */
+.message-erreur {
+  color: #cc0000;
+  background-color: #ffe0e0;
+  border: 1px solid #cc0000;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+ 
+/* Message de succès en vert */
+.message-succes {
+  color: #007700;
+  background-color: #e0ffe0;
+  border: 1px solid #007700;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+ 
+/* ========== MODAL ========== */
+ 
+/* Caché par défaut */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+ 
+/* Affiché quand la classe "actif" est ajoutée via JS */
+.modal-overlay.actif {
+  display: flex;
+}
+ 
+/* Fenêtre modale centrée et agrandie */
+.modal {
+  background: #f5f0e0;
+  border-radius: 6px;
+  width: 95%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+/* Titre du modal en bleu comme les cartes */
+.modal h3 {
+  background-color: #1a1aff;
+  color: white;
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 1.2rem;
+}
+ 
+/* Corps du modal avec marges internes */
+.modal-corps {
+  padding: 20px;
+}
+ 
+/* Texte dans le modal */
+.modal-corps p {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 8px 0;
+}
+ 
+/* Pied du modal : heure à gauche, statut à droite */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+ 
+/* Heure dans le modal */
+.modal-footer .heure {
+  font-size: 0.85rem;
+  color: #555;
+}
+ 
+/* ========== RESPONSIVE ========== */
+ 
+/* Sur tablette : 2 colonnes */
+@media (max-width: 900px) {
+  .grille-animations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* Sur mobile : 1 colonne */
+@media (max-width: 550px) {
+  .grille-animations {
+    grid-template-columns: 1fr;
+  }
+ 
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+}

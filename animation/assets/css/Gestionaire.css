@@ -1,0 +1,183 @@
+body { 
+    background-color: #EDE8D0;
+    font-family: Arial;
+    margin: 0; 
+}
+
+.header {
+    background: #0D00FF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.centrer {
+    text-align: center;
+}
+
+.buton {
+    margin-top: 20px;
+}
+
+.menu {
+    position: relative;
+    background: #000000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.bar {
+    background: #0D00FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1000px;    
+    border-radius: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.title {
+    background: #0D00FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.submenu { 
+    display: none; 
+    background: #0D00FF; 
+    padding: 10px; 
+    position:absolute; 
+    margin-top: 10px; 
+    border-radius: 10px;
+    text-align: center;
+    scrollbar-width: thin;
+}
+
+.dropdown:hover .submenu { 
+    display: block;
+    position: absolute;
+}
+
+.submenu li { 
+    color: white; 
+    padding: 5px 40px;
+    white-space: nowrap;
+}
+
+button {
+    background: #0D00FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.croix {
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    font-size: 50px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* ========================= */
+/*   CORRECTION IMPORTANTE   */
+/* ========================= */
+
+/* Permet aux images de dépasser les bordures */
+td {
+    position: relative;
+    overflow: visible;
+}
+
+/* Version unique et propre de .case-anim */
+.case-anim {
+    position: relative;      /* plus absolute */
+    margin-bottom: 4px;      /* espace entre chaque animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Conteneur des icônes (image + +) */
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image du thème */
+.icone-theme {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Le + */
+.icone-plus {
+    font-size: 26px;
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+/* Menu supprimer */
+.menu-suppr {
+    display: none;
+    background: white;
+    border: 1px solid black;
+    padding: 3px 6px;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.case-anim:hover .menu-suppr {
+    display: block;
+}
+
+.heure-anim {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+
+

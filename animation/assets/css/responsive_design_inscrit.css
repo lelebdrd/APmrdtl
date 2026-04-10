@@ -1,0 +1,125 @@
+/* =============================== */
+/*        TABLETTE (≤ 900px)       */
+/* =============================== */
+@media (max-width: 900px) {
+
+    /* Menu noir */
+    .menu {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .title {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .bar {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Titre + recherche */
+    .centrer {
+        margin-top: 20px;
+    }
+
+    .search-bar input {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    /* Grille : passe en 2 colonnes */
+    .container-animations {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    .bloc-animation {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .croix {
+        position: absolute;
+        top: 200px;   /* sous la barre noire */
+        right: 25px;
+        font-size: 55px;
+        z-index: 9999;
+    }
+}
+
+
+/* =============================== */
+/*          MOBILE (≤ 600px)       */
+/* =============================== */
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    /* Menu noir */
+    .menu {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    /* Barre de recherche */
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .search-bar button {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Grille : 1 colonne */
+    .container-animations {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        padding: 10px !important;
+    }
+
+    .bloc-animation {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Croix retour */
+    .croix {
+        position: absolute;
+        top: 285px;   /* juste sous la barre noire */
+        right: 15px;
+        font-size: 40px;
+        z-index: 9999;
+    }
+
+    /* Pagination */
+    .pagination {
+        font-size: 18px;
+    }
+
+    .fleche {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}

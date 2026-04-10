@@ -1,0 +1,229 @@
+/* =============================== */
+/*        TABLETTE ipad pro (≤ 1025px)       */
+/* =============================== */
+@media (max-width: 1025px )and (min-width: 901px ) {
+
+    body {
+        font-size: 250%;
+    }
+
+    .header h1 {
+        font-size: 55px;
+    }
+    /* Menu noir */
+    .menu {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .title {
+        padding: 8px 166px;
+        font-size: 25px;
+
+    }
+
+    .bar {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .btn_search{
+        font-size: 30px;
+    padding: 8px 166px;
+    }
+
+    button{
+        font-size: 30px;
+        padding: 8px 16px !important ;
+    }
+
+    /* Titre + recherche */
+    .centrer {
+        margin-top: 80px;
+    }
+
+    .search-bar input {
+        width: 30%;
+        font-size: 30px;
+    }
+
+    /* Grille : passe en 2 colonnes */
+    .container-animations {
+        grid-template-columns: repeat(0, 2fr) !important;
+        gap: 20px !important;
+        padding: 10px !important;
+        
+    }
+
+    .bloc-animation {
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .croix {
+        position: absolute;
+        top: 300px;   /* sous la barre noire */
+        right: 30px;
+        font-size: 55px;
+        z-index: 9999;
+    }
+}
+
+
+/* =============================== */
+/*        TABLETTE (≤ 900px)       */
+/* =============================== */
+@media (max-width: 900px ) and (min-width: 600px) {
+
+    body {
+        font-size: 10%;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+    /* Menu noir */
+    .menu {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .title {
+        padding: 8px 117px;
+        font-size: 25px;
+
+    }
+
+    .submenu{
+        padding: 8px 117px;
+        font-size: 25px;
+    }
+
+    .bar {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .btn_search{
+        font-size: 30px;
+    padding: 8px 166px;
+    }
+
+    button{
+        font-size: 30px;
+        padding: 8px 16px !important ;
+    }
+
+    /* Titre + recherche */
+    .centrer {
+        margin-top: 80px;
+    }
+
+    .search-bar input {
+        width: 30%;
+        font-size: 30px;
+    }
+
+    /* Grille : passe en 2 colonnes */
+    .container-animations {
+        grid-template-columns: repeat(0, 2fr) !important;
+        gap: 20px !important;
+        padding: 10px !important;
+        
+    }
+
+    .bloc-animation {
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .croix {
+        position: absolute;
+        top: 300px;   /* sous la barre noire */
+        right: 30px;
+        font-size: 55px;
+        z-index: 9999;
+    }
+}
+
+/* =============================== */
+/*          MOBILE (≤ 600px)       */
+/* =============================== */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 150%;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    /* Menu noir */
+    .menu {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    /* Barre de recherche */
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .search-bar button {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Grille : 1 colonne */
+    .container-animations {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        padding: 10px !important;
+    }
+
+    .bloc-animation {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Croix retour */
+    .croix {
+        position: absolute;
+        top: 260px;   /* juste sous la barre noire */
+        right: 15px;
+        font-size: 40px;
+        z-index: 9999;
+    }
+
+    /* Pagination */
+    .pagination {
+        font-size: 18px;
+    }
+
+    .fleche {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,186 @@
+body { 
+    background-color: #EDE8D0;
+    font-family: Arial;
+    margin: 0; 
+}
+
+.header {
+    background: #0D00FF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* MENU NOIR (entetepagetraitement.html) */
+.menu {
+    position: relative;
+    background: #000000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.title {
+    background: #0D00FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.submenu { 
+    display: none; 
+    background: #0D00FF; 
+    padding: 10px; 
+    position:absolute; 
+    margin-top: 10px; 
+    border-radius: 10px;
+    text-align: center;
+    scrollbar-width: thin;
+}
+
+.dropdown:hover .submenu { 
+    display: block;
+}
+
+.submenu li { 
+    color: white; 
+    padding: 5px 40px;
+    white-space: nowrap;
+}
+
+.bar {
+    background: #0D00FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1000px;    
+    border-radius: 20px;
+}
+
+/* TABLEAU DU CALENDRIER */
+
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Permet aux images de dépasser les bordures */
+td {
+    position: relative;
+    overflow: visible;
+}
+
+/* CASE D’UNE ANIMATION */
+.case-anim {
+    position: relative;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Conteneur des icônes (image + +) */
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image du thème */
+.icone-theme {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Le + */
+.icone-plus {
+    font-size: 26px;
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+/* Menu supprimer */
+.menu-suppr {
+    display: none;
+    background: #0D00FF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.menu-suppr a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.case-anim:hover .menu-suppr {
+    display: block;
+}
+
+/* Heures affichées dans la case */
+.heure-anim {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.semaine{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #0D00FF;
+    color: white;
+    white-space: nowrap;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slideRight 15s linear infinite;
+    font-size: 40px;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}

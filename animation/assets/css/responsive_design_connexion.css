@@ -1,0 +1,70 @@
+/* Écran moyen (tablette) */
+@media (max-width: 900px) {
+
+    .menu {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .title {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .bar {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .centrer {
+        margin-top: 30px;
+    }
+
+    .centrer form {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .centrer input {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .centrer {
+        margin-top: 20px;
+    }
+
+    .centrer form {
+        width: 90%;
+        padding: 15px 20px;
+    }
+
+    .centrer input {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
