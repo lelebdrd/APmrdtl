@@ -23,6 +23,17 @@ require('../back_end/traitement.php') ;
 </div>
 
 
+<?php require('../include/entetepagetraitement.html'); ?>
+
+<!-- Navigation semaines &#62 et 60; <- -> -->
+<div class="semaine">
+    <a href="?semaine=<?= $semainePrec ?>&annee=<?= $anneePrec ?>">&#60;</a>
+    &nbsp;&nbsp;
+    Semaine <?= $semaine ?> - <?= $annee ?>
+    &nbsp;&nbsp;
+    <a href="?semaine=<?= $semaineSuiv ?>&annee=<?= $anneeSuiv ?>">&#62;</a> 
+</div>
+
 <div class="cal-wrapper">
 <table id="calendrier">
 
@@ -44,12 +55,36 @@ require('../back_end/traitement.php') ;
             <?php foreach ($jours as $date): ?>
             <td>
                 <?php
+$dateSQL = $date->format('Y-m-d');
+$heureSQL = $h;
+
+$sql = $cnx->prepare("
+    SELECT ID, idTheme, TIME(DateHeureDeb) AS deb, TIME(DateHeureFin) AS fin
+    FROM animation 
+    WHERE DATE(DateHeureDeb) = ?
+    AND TIME(DateHeureDeb) <= ?
+    AND TIME(DateHeureFin) >= ?
+    AND annulation = 0
+");
+$sql->execute([$dateSQL, $heureSQL, $heureSQL]);
+
+// Récupère toutes les animations de la case
+$anims = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+// Toujours un tableau, même vide
+$themes = array_column($anims, 'idTheme');
+
+$imagesThemes = [
+    1 => "patisserie.png",
+    2 => "refugelpo.png",
+];
 
 // SI AU MOINS UNE ANIMATION
 if (!empty($themes)):
 ?>
     <div class="icons-container">
 
+        <?php foreach ($anims as $anim): ?>
             <div class="case-anim">
                 <!-- Affichage des heures -->
     <div class="heure-anim">
@@ -75,6 +110,9 @@ if (!empty($themes)):
     </div>
 
 <?php else: ?>
+
+    <!-- Aucune animation juste un + -->
+    <a href="creation_animation.php?date=<?= $dateSQL ?>&heure=<?= $h ?>" class="icone-plus">+</a>
 
 <?php endif; ?>
 

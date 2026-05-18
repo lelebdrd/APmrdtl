@@ -50,6 +50,7 @@ require('../back_end/avec_inscrit.php');
         <p><strong>Heures :</strong> 
             <?= substr($anim['DateHeureDeb'], 11, 5) ?> → <?= substr($anim['DateHeureFin'], 11, 5) ?>
         </p>
+        
     </div>
 <?php endforeach; ?>
 
